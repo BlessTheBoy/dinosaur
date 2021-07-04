@@ -29,7 +29,10 @@ async function generateResults() {
   image.alt = dinoName;
   image.className = "result-image";
 
-  let cover = document.createElement("div");
+  let cover = document.querySelector("#cover")
+    ? document.querySelector("#cover")
+    : document.createElement("div");
+  cover.id = "cover";
   cover.appendChild(head);
   cover.appendChild(image);
 
