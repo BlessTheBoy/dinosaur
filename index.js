@@ -5,6 +5,10 @@ const port = process.env.PORT || 3000;
 
 app.use(express.static("public"));
 
+app.get("/", async (req, res) => {
+  express.static("public");
+});
+
 app.get("/api/dinoname", async (req, res) => {
   var options = {
     method: "GET",
